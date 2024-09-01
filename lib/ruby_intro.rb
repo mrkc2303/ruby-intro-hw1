@@ -5,8 +5,7 @@
 def sum(arr)
   # YOUR CODE HERE
   total = 0
-  arr.each |num| 
-    total += num
+  arr.each { |num| total += num }
   total
 end
 
