@@ -38,6 +38,16 @@ end
 
 def starts_with_consonant?(string)
   # YOUR CODE HERE
+  if string.empty?
+    return false
+  else
+    first_char = string[0].downcase
+    if ('a'..'z').include?(first_char) && !['a', 'e', 'i', 'o', 'u'].include?(first_char)
+      return true
+    else
+      return false
+    end
+  end
 end
 
 def binary_multiple_of_4?(string)
