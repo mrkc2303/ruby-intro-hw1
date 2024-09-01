@@ -4,7 +4,10 @@
 
 def sum(arr)
   # YOUR CODE HERE
-  0
+  total = 0
+  arr.each |num| 
+    total += num
+  total
 end
 
 def max_2_sum(arr)
