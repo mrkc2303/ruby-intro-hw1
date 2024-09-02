@@ -52,6 +52,22 @@ end
 
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
+  
+  if string.empty?
+    return false
+  end
+  
+  string.each_char do |char|
+    if char != '0' && char != '1'
+      return false
+    end
+  end
+
+  if string.to_i(2) % 4 == 0
+    return true
+  else
+    return false
+  end
 end
 
 # Part 3
