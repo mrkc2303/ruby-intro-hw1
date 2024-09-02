@@ -75,4 +75,19 @@ end
 # Object representing a book
 class BookInStock
   # YOUR CODE HERE
+
+  attr_accessor :isbn, :price
+
+  def initialize(isbn, price)
+    if isbn.empty? || price <= 0
+      raise ArgumentError.new("Invalid ISBN or price")
+    else
+      @isbn = isbn
+      @price = price
+    end
+  end
+
+  def price_as_string
+    "$" + sprintf('%.2f', @price)
+  end
 end
